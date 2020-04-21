@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/cookie.png' %}"/>
+</head>
+<body>
+    <script>
+        const biteSrc = "{% static 'sounds/bite.wav' %}";
+        const appleSrc = "{% static 'sounds/app.wav' %}";
+    </script>
+
+    <div class="left-side">
+        <div class="cookie-box">
+            <div class="counter">
+                <h3><span id="counter">0</span> cookies</h3>
+                <p>+<span id="per-second">0</span> per second</p>
+            </div>
+            <div class="cookie-image">
+                <img id="Cookie" src="{% static 'images/cookie.png' %}" alt="cookie" draggable="false">
+            </div>
+        </div>
+    </div>
+
+    <div class="right-side">
+        <div class="clicks">
+            <p><span id="clicks">0</span> Clicks</p>
+        </div>
+        
+        <div class="items"></div>
+    </div>
+
+    <div class="references">
+        <div><a href="http://soundbible.com/950-Bite.html"><cite>Bite Sound - SoundBible.com</cite></a></div>
+        <div><a href="http://soundbible.com/1133-Beep-Ping.html"><cite>Beep Sound - SoundBible.com</cite></a></div>
+        <div><a href="http://soundbible.com/1968-Apple-Bite.html"><cite>Apple Sound - SoundBible.com</cite></a></div>
+        <div id="Attribution_3-0"><a href="https://creativecommons.org/licenses/by/3.0/au/legalcode"><cite>All sounds licensed under Attribution 3.0</cite></a></div>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

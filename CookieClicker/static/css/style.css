@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(95, 66, 29,0.2);
+    color: rgba(82, 66, 33, 0.8);
+}
+
+.counter {
+    transform: translate(0, -60px);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.counter h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+.clicks {
+    font-size: 1.5rem;
+}
+.left-side {
+    background-color: rgb(102, 83, 41, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 640px;
+}
+.right-side {
+    background-color: rgb(102, 83, 41, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 640px;
+    margin-left: 10px;
+}
+
+.cookie-image {
+    width: 300px;
+    height: 320px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cookie-image img {
+    width: 100%;
+    height: 100%;
+}
+.cookie-image:active img {
+    width: 290px;
+    height: 310px;
+}
+.items button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 15px;
+    background-color: rgba(238, 227, 130, 0.5);
+    outline: none;
+    border: none;
+}
+.items {
+    transform: translate(0, 50px);
+}
+.items span {
+    color: red;
+}
+.tooltip {
+    visibility: hidden;
+    z-index: 1;
+    height: 0;
+    transform: translate(160px, -60px);
+}
+button:hover .tooltip {
+    visibility: visible;
+    position: absolute;
+    z-index: 1;
+}
+
+button:active .tooltip {
+    visibility: hidden;
+}
+
+.references {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.items .locked {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.items .locked:hover .tooltip {
+    visibility: hidden;
+}
+
